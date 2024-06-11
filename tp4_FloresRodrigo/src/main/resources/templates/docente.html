@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head data-th-replace="~{/layouts/header :: head}"></head>
+
+<body>
+	<div data-th-replace="~{/layouts/header :: header}"></div>
+
+	<div class="container mt-5 col-lg-6">
+		<div class="row mb-3">
+			<h2 data-th-text="${edicion}?'Editar Docente':'Registrar Nuevo docente'" class="mb-4"></h2>
+		</div>
+		<form data-th-action="${edicion}?@{/docente/modificar} : @{/docente/guardar}" th:object="${docente}"
+			method="post">
+			<div class="form-group">
+				<label for="nombre">Nombre:</label>
+				<input type="text" class="form-control" id="nombre" th:field="*{nombre}" required>
+			</div>
+			<div class="form-group">
+				<label for="apellido">Apellido:</label>
+				<input type="text" class="form-control" id="apellido" th:field="*{apellido}" required>
+			</div>
+			<div class="form-group" th:if="${edicion}">
+				<label for="legajo">Legajo:</label>
+				<input type="number" th:readonly="${edicion}?'readonly'" class="form-control" id="legajo"
+					th:field="*{legajo}">
+			</div>
+			<div class="form-group">
+				<label for="email">Correo:</label>
+				<input type="email" class="form-control" id="email" th:field="*{email}" required>
+			</div>
+			<div class="form-group">
+				<label for="telefono">Telefono:</label>
+				<input type="number" class="form-control" id="telefono" th:field="*{telefono}" required>
+			</div>
+			<br>
+			<p class="text-center"> <input type="submit" class="btn btn-primary"
+					th:value="${edicion}?'Editar':'Guardar'"></p>
+		</form>
+	</div>
+
+	<footer data-th-replace="~{/layouts/footer :: footer}"></footer>
+
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
