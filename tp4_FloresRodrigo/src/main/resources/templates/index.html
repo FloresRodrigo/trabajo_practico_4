@@ -1,68 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="es">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>UNJU - Facultad de Ingeniería</title>
-	<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}">
-	<link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLZBKY_5NEUddi7DQOj9xgRdpi9Sa4qcRKbJngWkl6wQ&s">
-</head>
+<head data-th-replace="~{/layouts/header :: head}"></head>
 
 <body>
-	<header class="bg-light py-3">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-md-2">
-					<img src="https://fi.unju.edu.ar/images/fi-logo.png"
-						alt="logo" class="img-fluid">
-				</div>
-				<div class="col-md-7">
-					<h3 class="mb-0">Universidad Nacional de Jujuy - Facultad de Ingeniería</h3>
-				</div>
-				<div class="col-md-3 text-center">
-					<p class="mb-0">Siendo proactivos, responsables de nuestro propio destino</p>
-				</div>
-			</div>
-		</div>
-	</header>
-	<nav class="navbar navbar-expand-lg bg-body-tertiary">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">UNJU</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#acerca-de">Acerca de</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#carreras">Carreras</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#noticias">Noticias</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#contacto">Contacto</a>
-					</li>
-				</ul>
-				<form class="d-flex" role="search">
-					<input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-					<button class="btn btn-outline-success" type="submit">Buscar</button>
-				</form>
-			</div>
-		</div>
-	</nav>
+
+	<header data-th-replace="~{/layouts/header :: header}"></header>
+
 
 	<div class="container-fluid mb-5 mt-5">
 		<div class="row">
-			<!-- Main Content -->
 			<main class="col-md-10 px-5">
 				<div>
 					<section class="text-center">
@@ -175,63 +122,18 @@
 					<h4>Menu</h4>
 				</div>
 				<div class="text-center">
-					<a href="https://www.fi.unju.edu.ar/servicios/biblioteca.html" target="_blank" rel="noopener noreferrer"
-						class="d-block text-decoration-none text-dark">Biblioteca</a>
-					<a href="https://www.fi.unju.edu.ar/secretarias/sec-academica/calendario-academico.html" target="_blank"
-						rel="noopener noreferrer" class="d-block text-decoration-none text-dark">Calendario academico</a>
+					<a href="https://www.fi.unju.edu.ar/servicios/biblioteca.html" target="_blank"
+						rel="noopener noreferrer" class="d-block text-decoration-none text-dark">Biblioteca</a>
+					<a href="https://www.fi.unju.edu.ar/secretarias/sec-academica/calendario-academico.html"
+						target="_blank" rel="noopener noreferrer"
+						class="d-block text-decoration-none text-dark">Calendario academico</a>
 				</div>
-				</aside>
+			</aside>
 
 		</div>
 	</div>
 
-	<footer class="bg-dark text-light py-4">
-		<div class="container">
-			<div class="row">
-				<!-- Facultad de Ingeniería -->
-				<div class="col-md-6">
-					<div>
-						<h3 class="mb-3">FACULTAD DE INGENIERÍA - UNJu</h3>
-						<p><i></i>Ítalo Palanca Nº 10</p>
-						<p><i></i>San Salvador de Jujuy, Jujuy - Argentina</p>
-						<p><i></i><a href="mailto:info@fi.unju.edu.ar"
-								class="text-light text-decoration-none">info@fi.unju.edu.ar</a></p>
-						<h3 class="mb-3">Aviso Legal</h3>
-						<ul class="list-unstyled">
-							<li><a href="#" class="text-light text-decoration-none">Términos y Condiciones</a></li>
-							<li><a href="#" class="text-light text-decoration-none">Condiciones de uso del Correo
-									Electrónico</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- Redes Sociales -->
-				<div class="col-md-6">
-					<div>
-						<h3 class="mb-3">Redes Sociales</h3>
-						<ul class="list-unstyled">
-							<li><a href="https://www.facebook.com/fiunju/" target="_blank" rel="noopener noreferrer"
-									class="text-light text-decoration-none"><i></i>Facebook</a></li>
-							<li><a href="https://www.youtube.com/channel/UCgS9XJlKKSYI1oJ4lIOo77A" target="_blank"
-									rel="noopener noreferrer" class="text-light text-decoration-none"><i></i>YouTube</a>
-							</li>
-							<li><a href="https://www.linkedin.com/school/facultad-de-ingenieria-unju" target="_blank"
-									rel="noopener noreferrer"
-									class="text-light text-decoration-none"><i></i>Linkedin</a></li>
-							<li><a href="https://www.instagram.com/fiunju/" target="_blank" rel="noopener noreferrer"
-									class="text-light text-decoration-none"><i></i>Instagram</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container text-center mt-4">
-			<div class="row">
-				<div class="col-md-12">
-					<p class="mb-0">Copyright © 2014-2022 - Facultad de Ingeniería - UNJu</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<footer data-th-replace="~{/layouts/footer :: footer}"></footer>
 
 	<script type="text/javascript" data-th-stc="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
